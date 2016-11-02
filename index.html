@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Firebase Hosting</title>
+    <style media="screen">
+    </style>
+  </head>
+  <body>
+    <h1>Book</h1>
+    <label for="email">Email</label>
+    <input id="booking-email" type="email" name="email" data-default=""/>
+    <br />
+    <label for="quantity">Number of Tickets</label>
+    <input id="booking-quantity" type="number" name="quantity" min="1" max="15" value="1" data-default="1"/>
+    <br />
+    <input id="book" type="button" value="Book" />
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCBvFJxyLOsBditRqm9k60sJQGKB2vBGT4",
+        authDomain: "spe-booking.firebaseapp.com",
+        databaseURL: "https://spe-booking.firebaseio.com",
+        storageBucket: "spe-booking.appspot.com",
+        messagingSenderId: "118856002822"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

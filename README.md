@@ -1,2 +1,2 @@
-# spe-booking
-Software Product Engineering Booking system
+# SPE Booking
+To run run `firebase serve`, writes to the spe-bookings project
