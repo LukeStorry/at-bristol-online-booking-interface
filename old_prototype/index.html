@@ -2,35 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Bookings</title>
-    <link href="../css/form.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Bookings</title>
+  <link href="index.css" rel="stylesheet">
 </head>
 
 
 <body>
-    <form id="booking-form" class="form">
-        <input id="booking-email" type="email" placeholder="Email" name="email" />
-        <input id="booking-quantity" type="number" placeholder="Number of Tickets" name="quantity" min="1" max="15" />
-        <button id="book" class="btn btn-large btn-primary" type="submit">Book</button>
-    </form>
+  <form id="booking-form" class="form">
+    <input id="booking-email" type="email" placeholder="Email" name="email" />
+    <input id="booking-quantity" type="number" placeholder="Number of Tickets" name="quantity" min="1" max="15" />
+    <button id="book" class="btn btn-large btn-primary" type="submit">Book</button>
+  </form>
 
 
-    <!-- <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script> -->
 
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyCBvFJxyLOsBditRqm9k60sJQGKB2vBGT4",
-            authDomain: "spe-booking.firebaseapp.com",
-            databaseURL: "https://spe-booking.firebaseio.com",
-            storageBucket: "spe-booking.appspot.com",
-            messagingSenderId: "118856002822"
-        };
-        firebase.initializeApp(config);
-    </script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCBvFJxyLOsBditRqm9k60sJQGKB2vBGT4",
+      authDomain: "spe-booking.firebaseapp.com",
+      databaseURL: "https://spe-booking.firebaseio.com",
+      storageBucket: "spe-booking.appspot.com",
+      messagingSenderId: "118856002822"
+    };
+    firebase.initializeApp(config);
+  </script>
 
-    <script src="main.js"></script>
+  <script src="main.js"></script>
 
 </body>
 
