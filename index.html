@@ -1,34 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
-    <title>Welcome to Firebase Hosting</title>
-    <style media="screen">
+    <title>Bookings</title>
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            background: #DDEEFF;
+            padding: 8% 0 0;
+            margin: auto;
+        }
+
+        .form {
+            position: relative;
+            background: #AACCFF;
+            max-width: 360px;
+            margin: 0 auto 20%;
+            padding: 5%;
+            text-align: center;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+        .form input {
+            font-family: sans-serif;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .form button {
+            font-family: sans-serif;
+            background: #42abcd;
+            width: 50%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 16px;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Book</h1>
-    <label for="email">Email</label>
-    <input id="booking-email" type="email" name="email" data-default=""/>
-    <br />
-    <label for="quantity">Number of Tickets</label>
-    <input id="booking-quantity" type="number" name="quantity" min="1" max="15" value="1" data-default="1"/>
-    <br />
-    <input id="book" type="button" value="Book" />
+</head>
+
+
+<body>
+    <form id="booking-form" class="form">
+        <input id="booking-email" type="email" placeholder="Email" name="email" />
+        <input id="booking-quantity" type="number" placeholder="Number of Tickets" name="quantity" min="1" max="15" />
+        <button id="book" class="btn btn-large btn-primary" type="submit">Book</button>
+    </form>
 
 
     <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
     <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCBvFJxyLOsBditRqm9k60sJQGKB2vBGT4",
-        authDomain: "spe-booking.firebaseapp.com",
-        databaseURL: "https://spe-booking.firebaseio.com",
-        storageBucket: "spe-booking.appspot.com",
-        messagingSenderId: "118856002822"
-      };
-      firebase.initializeApp(config);
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCBvFJxyLOsBditRqm9k60sJQGKB2vBGT4",
+            authDomain: "spe-booking.firebaseapp.com",
+            databaseURL: "https://spe-booking.firebaseio.com",
+            storageBucket: "spe-booking.appspot.com",
+            messagingSenderId: "118856002822"
+        };
+        firebase.initializeApp(config);
     </script>
     <script src="main.js"></script>
-  </body>
+
+</body>
+
 </html>
