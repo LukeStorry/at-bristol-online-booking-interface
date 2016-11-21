@@ -1,12 +1,12 @@
 body {
-    background: #DDEEFF;
+    background: #CCC;
     padding: 8% 0 0;
     margin: auto;
 }
 
 .form {
     position: relative;
-    background: #AACCFF;
+    background: #333;
     max-width: 360px;
     margin: 0 auto 20%;
     padding: 5%;
@@ -16,7 +16,9 @@ body {
 
 .form input {
     font-family: sans-serif;
-    background: #f2f2f2;
+    color: #F44;
+    font-weight: bold;
+    background: #FFF;
     width: 100%;
     border: 0;
     margin: 0 0 15px;
@@ -27,9 +29,11 @@ body {
 
 .form button {
     font-family: sans-serif;
-    background: #42abcd;
+    background: #F44;
+    font-weight: bold;
     width: 50%;
     border: 0;
     padding: 15px;
-    color: #FFFFFF;
+    color: #FFF;
     font-size: 16px;
+}
