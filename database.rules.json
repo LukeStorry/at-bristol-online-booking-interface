@@ -1,6 +1,27 @@
 {
-  "rules": {
-    ".read": false,
-    ".write": true
-  }
-}
+    "rules": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+
+            "bookings": {
+
+            //wildcards are always strings
+            "booking_id": {
+                //Only the booking system has write access and no data must exist already (no overwrites)
+                ".write": "auth.uid === 'booking-service' && !data.exists()",
+
+                //validate the fields
+                "email": {
+                    ".validate": "newData.isString()"
+                },
+                "timestamp": {
+                    ".validate": "newData.isNumber()"
+                },
+                //invalidate any extra fields
+                "$other": {
+                    ".validate": false
+                },
+
+            }
+        }
+    }
