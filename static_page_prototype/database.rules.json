@@ -1,8 +1,11 @@
 {
   "rules": {
     ".read": "auth != null",
-    ".write": "auth != null",
+    ".write": "auth != null"
   }
+}
+
+
 /*}
 
     "bookings": {
