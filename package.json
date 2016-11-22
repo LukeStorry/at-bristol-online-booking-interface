@@ -1,11 +1,15 @@
 {
   "dependencies": {
+    "browser-sync": "^2.18.2",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
-    "react-router": "^2.4.0"
+    "react-router": "^2.4.0",
+    "webpack-hot-middleware": "^2.13.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.2.2",
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.13.0",
     "babel-eslint": "^6.0.2",
     "babel-loader": "^6.2.0",
@@ -27,7 +31,7 @@
     "extract-text-webpack-plugin": "^2.0.0-beta.3",
     "gulp": "github:gulpjs/gulp#4ed9a4a3275559c73a396eff7e1fde3824951ebb",
     "gulp-filter": "^4.0.0",
-    "gulp-hub": "frankwallis/gulp-hub#d461b9c700df9010d0a8694e4af1fb96d9f38bf4",
+    "gulp-hub": "github:frankwallis/gulp-hub#d461b9c700df9010d0a8694e4af1fb96d9f38bf4",
     "gulp-util": "^3.0.7",
     "html-webpack-plugin": "^2.9.0",
     "jasmine": "^2.4.1",
@@ -65,5 +69,23 @@
       "xo-react/space",
       "xo-space/esnext"
     ]
-  }
+  },
+  "name": "spe-booking",
+  "description": "first install the firebase CLI tools:\r `npm install -g firebase-tools`",
+  "version": "0.2.1",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/begly/spe-booking.git"
+  },
+  "keywords": [
+    "booking",
+    "elabs"
+  ],
+  "author": "elabs",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/begly/spe-booking/issues"
+  },
+  "homepage": "https://github.com/begly/spe-booking#readme"
 }
