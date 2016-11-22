@@ -1,37 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FountainJS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-<head>
-  <meta charset="utf-8">
-  <title>Bookings</title>
-  <link href="index.css" rel="stylesheet">
-</head>
-
-
-<body>
-  <form id="booking-form" class="form">
-    <input id="booking-email" type="email" placeholder="Email" name="email" />
-    <input id="booking-quantity" type="number" placeholder="Number of Tickets" name="quantity" min="1" max="15" />
-    <button id="book" class="btn btn-large btn-primary" type="submit">Book</button>
-  </form>
-
-
-  <!-- <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script> -->
-
-  <!-- <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCBvFJxyLOsBditRqm9k60sJQGKB2vBGT4",
-      authDomain: "spe-booking.firebaseapp.com",
-      databaseURL: "https://spe-booking.firebaseio.com",
-      storageBucket: "spe-booking.appspot.com",
-      messagingSenderId: "118856002822"
-    };
-    firebase.initializeApp(config);
-  </script> -->
-
-  <script src="main.js"></script>
-
-</body>
-
+    <div id="root"></div>
+  </body>
 </html>

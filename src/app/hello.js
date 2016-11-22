@@ -1,9 +1,9 @@
-var React = require('react');
+import React, {Component} from 'react';
 
-module.exports = React.createClass({
-  render: function () {
+export class Hello extends Component {
+  render() {
     return (
       <h1>{'Hello world!'}</h1>
     );
   }
-});
+}

@@ -4,7 +4,7 @@
     "props": {
       "framework": "react",
       "modules": "webpack",
-      "js": "js",
+      "js": "babel",
       "ci": [],
       "css": "css",
       "skipInstall": true,
