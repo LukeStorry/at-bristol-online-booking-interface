@@ -4,28 +4,3 @@
     ".write": "auth != null"
   }
 }
-
-
-/*}
-
-    "bookings": {
-
-      //wildcards are always strings
-      "booking_id": {
-        //validate the fields
-        "email": {
-          ".validate": "newData.isString()"
-        },
-        "timestamp": {
-          ".validate": "newData.isNumber()"
-        },
-        //invalidate any extra fields
-        "$other": {
-          ".validate": false
-        }
-
-
-      }
-    }
-  }
-}*/
