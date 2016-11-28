@@ -1,6 +1,72 @@
 {
-  "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
-  }
+    "rules": {
+        "recent_bookings": {
+            ".write": "auth.uid === 'booking-service' || auth.uid === 'entry-service' || auth.uid === 'rxvoyifq2nM7b7lPW1ZyF1Gcfht1'",
+            ".read": "auth.uid === 'booking-service' || auth.uid === 'entry-service' || auth.uid === 'rxvoyifq2nM7b7lPW1ZyF1Gcfht1'",
+            "$booking_num": {}
+        },
+        "bookings": {
+            ".write": "true",//"auth.uid === 'booking-service'",
+            ".read": "true",//"auth.uid === 'entry-service' || auth.uid === 'booking-service' || auth.uid === 'rxvoyifq2nM7b7lPW1ZyF1Gcfht1'",
+            ".indexOn": ["email", "timestamp"],
+            "booking_id": {
+                "email": {
+                    ".validate": "newData.isString()"
+                },
+                "timestamp": {
+                    ".validate": "newData.isNumber()"
+                },
+                "quantiy": {
+                  	".validate": "newData.isNumber()"
+                },
+                "$other": {
+                    ".validate": false
+                }
+            }
+        },
+        "rfids": {
+            /* DEBUGING hence .write for booking service
+            ".write": "(auth.uid === 'booking-service' || auth.uid === 'entry-service'  || auth.uid === 'rxvoyifq2nM7b7lPW1ZyF1Gcfht1') && !data.exists()",
+            ".read": "auth.uid === 'entry-service' || auth.uid === 'exhibitionuid' || auth.uid === 'rxvoyifq2nM7b7lPW1ZyF1Gcfht1'",
+            ".indexOn": "booking_id",
+            "$rfid_num": {
+                //Only the entry system should be allowed to assign rfids and no rfids should be overwritten
+
+                //Check fields are of the right type
+                "uid": {
+                    ".validate": "newData.isString()"
+                },
+                "booking_id": {
+                    ".validate": "newData.isString()"
+                },
+                //invalidate any extra fields
+                "$other": {
+                    ".validate": false
+                }*/
+                ".indexOn": "booking_id",
+                ".write": true,
+                ".read": true
+            },
+        "rfid_scans": {
+            ".write": true,
+            ".read": true,
+            ".indexOn": "scanner_id",
+            "rfid_scan_id": {
+            }
+        },
+
+        "media": {
+            ".write": "auth.uid == 'exhibitionuid'",
+            "$uid": {
+                ".read": "$uid == auth.uid || auth.uid == 'exhibitionuid'",
+                "$rfid_num": {
+                    //A list of filenames that exist in firebase storage under the rfid number
+                    "file_name": {
+                        ".validate": "root.child('rfids/'+$rfid_num).child('uid').val() == $uid && newData.isString()"
+                    }
+                }
+            }
+        }
+    }
 }
+

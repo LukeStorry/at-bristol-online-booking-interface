@@ -1,13 +1,13 @@
 [debug] ----------------------------------------------------------------------
-[debug] Command:      D:\Program Files\nodejs\node.exe C:\Users\luke\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] CLI Version:  3.1.0
-[debug] Platform:     win32
-[debug] Node Version: v7.1.0
-[debug] Time:         Tue Nov 22 2016 19:29:17 GMT+0000 (GMT Standard Time)
+[debug] Command:      /usr/local/Cellar/node/6.3.1/bin/node /usr/local/bin/firebase serve
+[debug] CLI Version:  3.2.0
+[debug] Platform:     darwin
+[debug] Node Version: v6.3.1
+[debug] Time:         Mon Nov 28 2016 14:46:42 GMT+0000 (GMT)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [info] Starting Firebase development server...
 [info] 
-[info] Project Directory: D:\Documents\GitHub\uni\spe\spe-booking\static_page_prototype
+[info] Project Directory: /Users/Alex/Dropbox/documents/university/current/COMS20805 - Software Project Engineering/project/spe-booking/static_page_prototype
 [info] 
 [info] Server listening at: http://localhost:5000

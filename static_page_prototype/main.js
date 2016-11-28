@@ -1,3 +1,5 @@
+var new_items = false;
+
 function App() {
     this.user;
     this.book_button = document.getElementById('book');
@@ -7,6 +9,15 @@ function App() {
     this.book_button.addEventListener('click', this.book.bind(this));
 
     this.init_firebase();
+    //this.booking_ref.
+    this.booking_ref.once('child_added', function() {
+        
+    });
+    new_items = false;
+    this.booking_ref.on('child_added', this.save_recent_booking.bind(this));
+    this.booking_ref.once('child_added', function() {
+        new_items = true;
+    });
 }
 
 // Sets up shortcuts to Firebase features
@@ -16,6 +27,7 @@ App.prototype.init_firebase = function() {
     this.auth = firebase.auth()
 
     this.booking_ref = this.database.ref('bookings');
+    this.recent_bookings_ref = this.database.ref('recent_bookings');
     this.booking_ref.off();
 
     this.auth.onAuthStateChanged(this.on_auth_state_change.bind(this));
@@ -47,14 +59,25 @@ App.prototype.book = function() {
     var booking_data = this.get_booking_input();
 
     var booking = this.save_booking(booking_data);
+    console.log(booking);
     this.booked(booking_data);
     this.clear_booking_input();
 }
 
 App.prototype.save_booking = function(booking_data) {
-    booking_data.date = firebase.database.ServerValue.TIMESTAMP;
+    booking_data.timestamp = firebase.database.ServerValue.TIMESTAMP;
+
     return this.booking_ref.push(booking_data).catch(function(error) {
         console.error('Error writing new booking to Firebase Database', error);
+    });
+}
+
+App.prototype.save_recent_booking = function(snapshot) {
+    if (!new_items) return;
+
+    var id = snapshot.key;
+    this.database.ref('recent_bookings/' + id).set(id).catch(function(error) {
+        console.error('Error writing recent booking: ', error);
     });
 }
 
