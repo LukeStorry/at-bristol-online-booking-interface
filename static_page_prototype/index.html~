@@ -9,14 +9,18 @@
 
 
 <body>
+
   <form id="booking-form" class="form">
+
+	<img src="atbristol_logo.jpg" alt="atbristol_logo.jpg">
+	<h1>Prototype Booking Form</h2>
     <input id="booking-email" type="email" placeholder="Email" name="email" />
     <input id="booking-quantity" type="number" placeholder="Number of Tickets" name="quantity" min="1" max="15" />
     <button id="book" class="btn btn-large btn-primary">Book</button>
   </form>
 
 
-  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+  <script src="firebase.js"></script>
   <script>
     // Initialize Firebase
     var config = {

@@ -2,6 +2,12 @@ body {
     background: #EEE;
     padding: 8% 0 0;
     margin: auto;
+    color: #FFF;
+}
+
+img {
+    width: 80%;
+    height: auto;
 }
 
 .form {
