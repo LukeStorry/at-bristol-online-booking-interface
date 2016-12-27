@@ -1,6 +1,6 @@
 # SPE Booking
-
-Interface to add new bookings into Firebase 
+[![Build Status](https://travis-ci.com/begly/spe-booking.svg?token=2m8k4znZkPmBqrk4RSMa&branch=master)](https://travis-ci.com/begly/spe-booking)
+Interface to add new bookings into Firebase
 
 
 ## Usage
