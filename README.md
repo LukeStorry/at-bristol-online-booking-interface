@@ -1,19 +1,21 @@
 # SPE Booking
 
+Interface to add new bookings into Firebase 
+
+
+## Usage
+
 first install the firebase CLI tools:
 `npm install -g firebase-tools`
 
 Then run `firebase serve` and open [http://localhost:5000](http://localhost:5000), writes to the [spe-bookings firebase project](https://console.firebase.google.com/project/spe-booking)
 
 
-note: potentially just works from the index.html file, try that first.
 
 
 
 
-
-
-#TODO:
+## TODO:
 
 * Start a Node.js project, working with the build tools I've mentioned
 * write the logic, you can use some of the code I've written but some needs to change
@@ -28,7 +30,6 @@ note: potentially just works from the index.html file, try that first.
 
 
 
-* I think needs to be node.js cannot be single page application due to security problems with firebase (check Ewan's firebase specification for this)
 * maybe use bootstrap package - for server
 * Write a package for easy install
 * Use react to keep consistent, it is overkill but it makes the project more uniform
