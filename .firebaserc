@@ -1,6 +1,0 @@
-{
-  "projects": {
-    "default": "spe-booking",
-    "staging": "spe-booking"
-  }
-}
