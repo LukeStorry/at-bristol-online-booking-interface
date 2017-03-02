@@ -2,6 +2,8 @@
 
 Interface to add new bookings into Firebase
 
+![](docs/interface.png)
+
 ## Usage
 
 ```bash
