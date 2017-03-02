@@ -2,15 +2,22 @@
 
 Interface to add new bookings into Firebase
 
-[![Build Status](https://travis-ci.com/begly/spe-booking.svg?token=2m8k4znZkPmBqrk4RSMa&branch=master)](https://travis-ci.com/begly/spe-booking)
-
-
 ## Usage
 
-first install the firebase CLI tools:
-`npm install -g firebase-tools`
+```bash
+$ git clone https://github.com/begly/spe-booking.git
+$ cd spe-booking
+$ npm install
+$ npm start
+```
 
-Then run `firebase serve` and open [http://localhost:5000](http://localhost:5000), writes to the [spe-bookings firebase project](https://console.firebase.google.com/project/spe-booking)
+Now open [http://localhost:5000](http://localhost:5000).
+
+
+
+## Document TODO
+
+writes to the [spe-bookings firebase project](https://console.firebase.google.com/project/spe-booking)
 
 
 
