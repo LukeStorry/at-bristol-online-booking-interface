@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Bookings</title>
-  <link href="index.css" rel="stylesheet">
+  <title>Prototype Bookings Form</title>
+  <link href="static/css/index.css" rel="stylesheet">
 </head>
 
 
@@ -12,7 +12,7 @@
 
   <form id="booking-form" class="form">
 
-	<img src="atbristol_logo.jpg" alt="atbristol_logo.jpg">
+	<img src="static/imgs/atbristol_logo.jpg" alt="@Bristol Logo">
 	<h1>Prototype Booking Form</h2>
     <input id="booking-email" type="email" placeholder="Email" name="email" />
     <input id="booking-quantity" type="number" placeholder="Number of Tickets" name="quantity" min="1" max="15" />
@@ -20,7 +20,7 @@
   </form>
 
 
-  <script src="firebase.js"></script>
+  <script src="static/js/firebase.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -33,7 +33,7 @@
     firebase.initializeApp(config);
   </script>
 
-  <script src="main.js"></script>
+  <script src="static/js/main.js"></script>
 
 </body>
 

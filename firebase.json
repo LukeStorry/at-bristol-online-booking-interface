@@ -1,13 +1,13 @@
 {
   "database": {
-    "rules": "database.rules.json"
+    "rules": "conf/database.rules.json"
   },
   "hosting": {
     "public": ".",
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "/static/html/index.html"
       }
     ]
   }
