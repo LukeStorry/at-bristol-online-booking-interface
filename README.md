@@ -27,3 +27,6 @@ Writes bookings to booking collection and uses an event watcher to then add to t
 ```
 
 Recent bookings collection contains a list of IDs of recent bookings to be used by the front desk interface.
+
+### Code
+Entry point for this app is [index.html](static/html/index.html) and all logic is contained within [main.js](static/js/main.js).
