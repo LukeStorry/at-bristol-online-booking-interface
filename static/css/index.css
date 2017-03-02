@@ -18,12 +18,12 @@ img {
     padding: 5%;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .form input {
-    font-family: sans-serif;
     color: #F44;
-    font-weight: bold;
     background: #FFF;
     width: 100%;
     border: 0;
@@ -34,9 +34,7 @@ img {
 }
 
 .form button {
-    font-family: sans-serif;
     background: #F44;
-    font-weight: bold;
     width: 50%;
     border: 0;
     padding: 15px;
